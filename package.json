@@ -12,7 +12,8 @@
     "test:watch": "jest --watch",
     "migrate": "npx prisma migrate dev",
     "push": "npx prisma db push",
-    "gen": "npx prisma generate"
+    "gen": "npx prisma generate",
+    "preinstall": "npx prisma db push && npx prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^3.5.0",
