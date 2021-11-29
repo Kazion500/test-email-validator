@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build": "prisma generate",
     "test": "jest",
     "coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -16,13 +17,13 @@
   "dependencies": {
     "@prisma/client": "^3.5.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.2.1"
+    "express-fileupload": "^1.2.1",
+    "morgan": "^1.10.0",
+    "prisma": "^3.5.0",
   },
   "devDependencies": {
     "jest": "^27.3.1",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
-    "prisma": "^3.5.0",
     "supertest": "^6.1.6"
   }
 }
