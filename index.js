@@ -99,8 +99,7 @@ app.post("/contact", async (req, res) => {
     const user = await prisma.contact.create({
       data: {
         email: data.email,
-        accountId: parseInt(data.account),
-        status: data.status,
+        accountId: parseInt(data.accountId, 10),
         photo: data.photo,
       },
       select: {
