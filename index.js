@@ -100,6 +100,7 @@ app.post("/contact", async (req, res) => {
       data: {
         email: data.email,
         accountId: parseInt(data.account),
+        status: data.status,
         photo: data.photo,
       },
       select: {
