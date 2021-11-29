@@ -1,0 +1,28 @@
+{
+  "name": "test-prisma",
+  "version": "1.0.0",
+  "main": "email-validator",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "migrate": "npx prisma migrate dev",
+    "push": "npx prisma db push",
+    "gen": "npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.5.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.5.0",
+    "supertest": "^6.1.6"
+  }
+}
