@@ -5,6 +5,7 @@ const expressFileUpload = require("express-fileupload");
 const { PrismaClient } = require("@prisma/client");
 const app = express();
 const prisma = new PrismaClient();
+const PORT = process.env.PORT || 3000;
 
 app.use(morgan('short'));
 app.use(express.json());
@@ -152,8 +153,8 @@ function createUploadFolder() {
   return false
 }
 
-app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}!`);
 });
 
 module.exports = app;
